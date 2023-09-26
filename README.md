@@ -1,5 +1,5 @@
 # chess
-- [ ] create repo
+- [x] create repo
 - [ ] create intelliJ project
 - [ ] get chess starter code
 - [ ] compile
