@@ -1,15 +1,13 @@
 package chess;
 
 public class Move implements ChessMove{
-    private Position start;
-    private Position end;
+    private ChessPosition start;
+    private ChessPosition end;
     private ChessPiece.PieceType promotion;
-    public Move(Position st, Position en, Piece.PieceType promo){
+    public Move(ChessPosition st, ChessPosition en, ChessPiece.PieceType promo){
         start = st;
         end = en;
         promotion = promo;
-
-
     }
     @Override
     public ChessPosition getStartPosition() {

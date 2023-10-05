@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 public class Queen extends Piece {
     public Queen(ChessGame.TeamColor color){
@@ -10,6 +11,9 @@ public class Queen extends Piece {
 
     @Override
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
-        return null;
+        Collection<ChessMove> moves = new HashSet<ChessMove>();
+
+        return moves;
     }
+
 }

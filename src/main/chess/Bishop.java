@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 public class Bishop extends Piece {
     public Bishop(ChessGame.TeamColor color){
@@ -10,6 +11,35 @@ public class Bishop extends Piece {
 
     @Override
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
-        return null;
+        Collection<ChessMove> moves = new HashSet<ChessMove>();
+        //bottom left
+        iterate(board, myPosition, moves, -1, -1);
+        iterate(board, myPosition, moves, -1, 1);
+        iterate(board, myPosition, moves, 1, -1);
+        iterate(board, myPosition, moves, 1, 1);
+
+        return moves;
+    }
+
+    private void iterate(ChessBoard board, ChessPosition myPosition, Collection<ChessMove> moves, int c_direction, int r_direction) {
+        int c = myPosition.getColumn();
+        int r = myPosition.getRow();
+        while(true){
+            c += c_direction;
+            r += r_direction;
+            if(c >0 && c <9 && r >0 && r <9){
+                Position pos = new Position(c, r);
+                if(board.getPiece(pos) == null){
+                    moves.add(new Move(myPosition,pos,null));
+                }
+                if(board.getPiece(pos).getTeamColor() != this.color ){
+                    moves.add(new Move(myPosition,pos,null));
+                } else{
+                    return;
+                }
+            } else {
+                return;
+            }
+        }
     }
 }

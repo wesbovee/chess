@@ -4,14 +4,14 @@ import java.util.Collection;
 
 public abstract class Piece implements ChessPiece{
     protected ChessGame.TeamColor color;
-    protected PieceType type;
+    protected ChessPiece.PieceType type;
     @Override
     public ChessGame.TeamColor getTeamColor() {
         return color;
     }
 
     @Override
-    public PieceType getPieceType() {
+    public ChessPiece.PieceType getPieceType() {
         return type;
     }
 
