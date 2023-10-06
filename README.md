@@ -8,7 +8,7 @@
 - [x] king
 - [x] queen
 - [x] bishop
-- [ ] knight
+- [x] knight
 - [x] rook
 - [ ] pawn
 - [ ] game
