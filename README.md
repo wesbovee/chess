@@ -6,10 +6,10 @@
 - [x] piece
 - [x] board
 - [x] king
-- [ ] queen
+- [x] queen
 - [x] bishop
 - [ ] knight
-- [ ] rook
+- [x] rook
 - [ ] pawn
 - [ ] game
 - [ ] test functionality
