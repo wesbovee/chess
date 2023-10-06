@@ -7,7 +7,7 @@
 - [x] board
 - [ ] king
 - [ ] queen
-- [ ] bishop
+- [X] bishop
 - [ ] knight
 - [ ] rook
 - [ ] pawn
