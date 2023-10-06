@@ -5,9 +5,9 @@
 - [x] position
 - [x] piece
 - [x] board
-- [ ] king
+- [x] king
 - [ ] queen
-- [X] bishop
+- [x] bishop
 - [ ] knight
 - [ ] rook
 - [ ] pawn
