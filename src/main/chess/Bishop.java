@@ -24,17 +24,16 @@ public class Bishop extends Piece {
     private void shift(ChessBoard board, ChessPosition myPosition, Collection<ChessMove> moves, int c_direction, int r_direction) {
         int c = myPosition.getColumn();
         int r = myPosition.getRow();
-        while(true){
+        while(true) {
             c += c_direction;
             r += r_direction;
-            if(c >0 && c <9 && r >0 && r <9){
+            if(c >0 && c <9 && r >0 && r <9) {
                 Position pos = new Position(c, r);
-                if(board.getPiece(pos) == null){
+                if(board.getPiece(pos) == null) {
+                    moves.add(new Move(myPosition, pos, null));
+                } else if(board.getPiece(pos).getTeamColor() != this.color ) {
                     moves.add(new Move(myPosition,pos,null));
-                }
-                if(board.getPiece(pos).getTeamColor() != this.color ){
-                    moves.add(new Move(myPosition,pos,null));
-                } else{
+                } else {
                     return;
                 }
             } else {
