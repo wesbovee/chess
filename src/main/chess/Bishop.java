@@ -13,15 +13,15 @@ public class Bishop extends Piece {
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
         Collection<ChessMove> moves = new HashSet<ChessMove>();
         //bottom left
-        iterate(board, myPosition, moves, -1, -1);
-        iterate(board, myPosition, moves, -1, 1);
-        iterate(board, myPosition, moves, 1, -1);
-        iterate(board, myPosition, moves, 1, 1);
+        shift(board, myPosition, moves, -1, -1);
+        shift(board, myPosition, moves, -1, 1);
+        shift(board, myPosition, moves, 1, -1);
+        shift(board, myPosition, moves, 1, 1);
 
         return moves;
     }
 
-    private void iterate(ChessBoard board, ChessPosition myPosition, Collection<ChessMove> moves, int c_direction, int r_direction) {
+    private void shift(ChessBoard board, ChessPosition myPosition, Collection<ChessMove> moves, int c_direction, int r_direction) {
         int c = myPosition.getColumn();
         int r = myPosition.getRow();
         while(true){
