@@ -2,8 +2,6 @@ package chess;
 
 import java.util.Collection;
 import java.util.HashSet;
-
-import static chess.ChessGame.TeamColor.BLACK;
 import static chess.ChessGame.TeamColor.WHITE;
 
 public class Pawn extends Piece {

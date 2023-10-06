@@ -29,7 +29,7 @@ public class Board implements ChessBoard{
         }
     }
 
-    private void stageBoard(){
+    public void stageBoard(){
         int c = 0;
         int w = 0;
         int b = 7;
