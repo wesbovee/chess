@@ -31,6 +31,7 @@ public class Rook extends Piece {
                     moves.add(new Move(myPosition, pos, null));
                 } else if (board.getPiece(pos).getTeamColor() != this.color) {
                     moves.add(new Move(myPosition, pos, null));
+                    return;
                 } else {
                     return;
                 }

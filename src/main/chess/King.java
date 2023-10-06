@@ -12,14 +12,11 @@ public class King extends Piece {
     @Override
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
         Collection<ChessMove> moves = new HashSet<ChessMove>();
-        shift(board, myPosition, moves, 1,1);
-        shift(board, myPosition, moves, 1,0);
-        shift(board, myPosition, moves, 1,-1);
-        shift(board, myPosition, moves, 0,-1);
-        shift(board, myPosition, moves, -1,-1);
-        shift(board, myPosition, moves, -1,0);
-        shift(board, myPosition, moves, -1,1);
-        shift(board, myPosition, moves, 0,1);
+        for(int i = -1; i<2; i++) {
+            for(int j = -1; j<2; j++) {
+                shift(board, myPosition, moves, i,j);
+            }
+        }
         return moves;
     }
 
