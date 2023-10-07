@@ -30,7 +30,9 @@ public class Position implements ChessPosition{
     }
 
     @Override
+    //redo
     public int hashCode() {
-        return Objects.hash(row, column);
+       int hashVal = ((row -1) * 8) + column;
+       return hashVal;
     }
 }

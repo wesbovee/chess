@@ -2,6 +2,8 @@ package passoffTests;
 
 import chess.*;
 
+import java.util.Collection;
+
 /**
  * Used for testing your code
  * Add in code using your classes for each method for each FIXME
@@ -12,27 +14,42 @@ public class TestFactory {
     //------------------------------------------------------------------------------------------------------------------
     public static ChessBoard getNewBoard(){
         // FIXME
-		return null;
+
+		return new Board();
     }
 
     public static ChessGame getNewGame(){
         // FIXME
-		return null;
+		return new Game();
     }
 
     public static ChessPiece getNewPiece(ChessGame.TeamColor pieceColor, ChessPiece.PieceType type){
         // FIXME
-		return null;
+        Piece piece = null;
+        if(type == ChessPiece.PieceType.KING){
+            piece = new King(pieceColor);
+        } else  if (type == ChessPiece.PieceType.QUEEN){
+            piece = new Queen(pieceColor);
+        } else  if (type == ChessPiece.PieceType.BISHOP){
+            piece = new Bishop(pieceColor);
+        } else  if (type == ChessPiece.PieceType.KNIGHT){
+            piece = new Knight(pieceColor);
+        } else  if (type == ChessPiece.PieceType.ROOK){
+            piece = new Rook(pieceColor);
+        } else  if (type == ChessPiece.PieceType.PAWN){
+            piece = new Pawn(pieceColor);
+        }
+		return piece;
     }
 
     public static ChessPosition getNewPosition(Integer row, Integer col){
         // FIXME
-		return null;
+		return new Position(col,row);
     }
 
     public static ChessMove getNewMove(ChessPosition startPosition, ChessPosition endPosition, ChessPiece.PieceType promotionPiece){
         // FIXME
-		return null;
+		return new Move(startPosition,endPosition,promotionPiece);
     }
     //------------------------------------------------------------------------------------------------------------------
 
