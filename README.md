@@ -10,7 +10,7 @@
 - [x] bishop
 - [x] knight
 - [x] rook
-- [ ] pawn
-- [ ] game
+- [x] pawn
+- [x] game
 - [ ] test functionality
 repo for chess project 240
