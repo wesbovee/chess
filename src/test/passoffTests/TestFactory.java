@@ -14,7 +14,6 @@ public class TestFactory {
     //------------------------------------------------------------------------------------------------------------------
     public static ChessBoard getNewBoard(){
         // FIXME
-
 		return new Board();
     }
 

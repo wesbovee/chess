@@ -29,16 +29,18 @@ public class Move implements ChessMove{
     @Override
     //redo
     public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        Move move = (Move) object;
-        //redo
-        return Objects.equals(start, move.start) && Objects.equals(end, move.end) && promotion == move.promotion;
+        if(object != null && this.getClass() == object.getClass()) {
+            Move moveTwo = (Move) object;
+            if (start == moveTwo.start && end == moveTwo.end && promotion == moveTwo.getPromotionPiece()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     //redo
     public int hashCode() {
-        return Objects.hash(start, end, promotion);
+        return(start.hashCode() * 64) + end.hashCode();
     }
 }
