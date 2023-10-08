@@ -23,15 +23,15 @@ public class Position implements ChessPosition{
 
     @Override
     public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        Position position = (Position) object;
-        return row == position.row && column == position.column;
+        if(object != null && this.getClass() == object.getClass()) {
+            Position posTwo = (Position) object;
+            return this.row == posTwo.getRow() && this.column == posTwo.getColumn();
+        }
+        return false;
     }
 
     @Override
     public int hashCode() {
-       int hashVal = ((row -1) * 8) + column;
-       return hashVal;
+        return ((row -1) * 8) + column;
     }
 }

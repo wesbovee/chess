@@ -30,10 +30,10 @@ public class Game implements ChessGame{
         if(gameBoard.getPiece(startPosition) == null){
             return null;
         }
-        Collection<ChessMove> potential =gameBoard.getPiece(startPosition).pieceMoves(gameBoard, startPosition);
+        Collection<ChessMove> potential = gameBoard.getPiece(startPosition).pieceMoves(gameBoard, startPosition);
         Collection<ChessMove> pass = new HashSet<>();
         for(ChessMove p : potential) {
-            if (testMove(p)) {
+            if (isGoodMove(p)) {
                 pass.add(p);
             }
         }
@@ -46,11 +46,16 @@ public class Game implements ChessGame{
     @Override
     public void makeMove(ChessMove move) throws InvalidMoveException {
         Collection<ChessMove> valid = validMoves(move.getStartPosition());
-        if(valid.contains(move)){
-            gameBoard.addPiece(move.getEndPosition(), gameBoard.getPiece(move.getStartPosition()));
-            gameBoard.addPiece(move.getStartPosition(), null);
+        if(valid != null){
+            if(valid.contains(move)) {
+                gameBoard.addPiece(move.getEndPosition(), gameBoard.getPiece(move.getStartPosition()));
+                gameBoard.addPiece(move.getStartPosition(), null);
+            } else {
+                throw new InvalidMoveException("This move is illegal");
+            }
         } else {
             throw new InvalidMoveException("This move is illegal");
+
         }
     }
 
@@ -63,7 +68,8 @@ public class Game implements ChessGame{
                 ChessPiece temp = gameBoard.getPiece(new Position(c+1,r+1));
                 if(temp != null){
                     if (temp.getTeamColor() != teamColor) {
-                        possible_attacks.addAll(temp.pieceMoves(gameBoard,new Position(c+1,r+1)));
+                        Collection<ChessMove> temp_valid_moves = validMoves(new Position(c+1,r+1));
+                        possible_attacks.addAll(temp_valid_moves);
                     }
                     if (temp.getTeamColor() == teamColor && temp.getPieceType() == ChessPiece.PieceType.KING) {
                         king = new Position(c+1, r+1);
@@ -95,7 +101,7 @@ public class Game implements ChessGame{
             Collection<ChessMove> king_moves = gameBoard.getPiece(king).pieceMoves(gameBoard,king);
             king_moves.add(new Move(king,king,null));
             for(ChessMove k : king_moves) {
-                if(testMove(k)) {
+                if(isGoodMove(k)) {
                     return false;
                 }
             }
@@ -131,7 +137,7 @@ public class Game implements ChessGame{
     public Board getBoard() {
         return gameBoard;
     }
-    public boolean testMove(ChessMove move) {
+    public boolean isGoodMove(ChessMove move) {
         Board copy = gameBoard;
         gameBoard.addPiece(move.getEndPosition(), gameBoard.getPiece(move.getStartPosition()));
         gameBoard.addPiece(move.getStartPosition(), null);

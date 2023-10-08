@@ -7,7 +7,6 @@
     <list default="true" id="e2d9c8bb-5ec1-4739-93c3-f5fad2de4b8d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/chess/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/chess/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Move.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/chess/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Position.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +70,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ChessGameTests.validMoves">
     <configuration name="All in chess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <option name="PACKAGE_NAME" value="" />
@@ -80,8 +79,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ChessBoardTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoffTests.chessTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoffTests.chessTests" />
+      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.ChessBoardTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChessGameTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoffTests.chessTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoffTests.chessTests" />
+      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.ChessGameTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChessGameTests.invalidMoves" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoffTests.chessTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoffTests.chessTests" />
+      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.ChessGameTests" />
+      <option name="METHOD_NAME" value="invalidMoves" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChessGameTests.validMoves" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoffTests.chessTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoffTests.chessTests" />
+      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.ChessGameTests" />
+      <option name="METHOD_NAME" value="validMoves" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ChessGameTests.validMoves" />
+        <item itemvalue="JUnit.ChessBoardTests" />
+        <item itemvalue="JUnit.ChessGameTests" />
+        <item itemvalue="JUnit.ChessGameTests.invalidMoves" />
         <item itemvalue="JUnit.All in chess" />
       </list>
     </recent_temporary>
@@ -98,7 +163,7 @@
       <workItem from="1696013383568" duration="89000" />
       <workItem from="1696013484199" duration="2561000" />
       <workItem from="1696106054074" duration="37853000" />
-      <workItem from="1696698542515" duration="832000" />
+      <workItem from="1696698542515" duration="6882000" />
     </task>
     <servers />
   </component>
