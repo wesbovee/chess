@@ -31,7 +31,7 @@ public class Move implements ChessMove{
     public boolean equals(Object object) {
         if(object != null && this.getClass() == object.getClass()) {
             Move moveTwo = (Move) object;
-            if (start == moveTwo.start && end == moveTwo.end && promotion == moveTwo.getPromotionPiece()) {
+            if (start.equals(moveTwo.start) && end.equals(moveTwo.end) && Objects.equals(promotion, moveTwo.getPromotionPiece())) {
                 return true;
             }
         }

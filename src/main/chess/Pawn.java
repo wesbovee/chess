@@ -1,6 +1,8 @@
 package chess;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import static chess.ChessGame.TeamColor.WHITE;
 
@@ -14,26 +16,74 @@ public class Pawn extends Piece {
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
         Collection<ChessMove> moves = new HashSet<ChessMove>();
         int r = myPosition.getRow();
-        PieceType promo = null;
+        int c = myPosition.getColumn();
+        Collection <PieceType> promos = new ArrayList<>();
         if (this.color == WHITE) {
-            if(r == 2) {
-                shift(board, myPosition, moves, 0, 2,promo);
+            if(r == 2 && (board.getPiece(new Position(c,4))) == null && (board.getPiece(new Position(c,3))) == null) {
+                shift(board, myPosition, moves, 0, 2,null);
             }
             if(r == 7) {
-                promo = PieceType.QUEEN;
+                promos.add(PieceType.ROOK);
+                promos.add(PieceType.KNIGHT);
+                promos.add(PieceType.QUEEN);
+                promos.add(PieceType.BISHOP);
+            } else { promos.add(null); }
+
+            if(board.getPiece(new Position(c, r+1)) == null){
+                for(PieceType p : promos) {
+                    shift(board, myPosition, moves, 0, 1,p);
+                }
             }
-            for(int i = -1; i<2; i++){
-                shift(board, myPosition, moves, i, 1,promo);
+            if(c>1) {
+                if (board.getPiece(new Position(c - 1, r + 1)) != null) {
+                    if (board.getPiece(new Position(c - 1, r + 1)).getTeamColor() != this.color) {
+                        for (PieceType p : promos) {
+                            shift(board, myPosition, moves, -1, 1, p);
+                        }
+                    }
+                }
+            }
+            if(c<8) {
+                if (board.getPiece(new Position(c + 1, r + 1)) != null) {
+                    if (board.getPiece(new Position(c + 1, r + 1)).getTeamColor() != this.color) {
+                        for (PieceType p : promos) {
+                            shift(board, myPosition, moves, 1, 1, p);
+                        }
+                    }
+                }
             }
         } else {
-            if(r == 7) {
-                shift(board, myPosition, moves, 0, -2,promo);
+            if(r == 7 && (board.getPiece(new Position(c,5))) == null && (board.getPiece(new Position(c,6))) == null) {
+                shift(board, myPosition, moves, 0, -2,null);
             }
             if(r == 2) {
-                promo = PieceType.QUEEN;
+                promos.add(PieceType.ROOK);
+                promos.add(PieceType.KNIGHT);
+                promos.add(PieceType.QUEEN);
+                promos.add(PieceType.BISHOP);
+            } else { promos.add(null); }
+            if(board.getPiece(new Position(c, r-1)) == null){
+                for(PieceType p : promos) {
+                    shift(board, myPosition, moves, 0, -1, p);
+                }
             }
-            for(int i = -1; i<2; i++){
-                shift(board, myPosition, moves, i, -1,promo);
+            if(c>1) {
+                if (board.getPiece(new Position(c - 1, r - 1)) != null) {
+                    if (board.getPiece(new Position(c - 1, r - 1)).getTeamColor() != this.color) {
+                        for (PieceType p : promos) {
+                            shift(board, myPosition, moves, -1, -1, p);
+                        }
+                    }
+                }
+            }
+            if (c<8) {
+                if (board.getPiece(new Position(c + 1, r - 1)) != null) {
+                    if (board.getPiece(new Position(c + 1, r - 1)).getTeamColor() != this.color) {
+                        for (PieceType p : promos) {
+                            shift(board, myPosition, moves, 1, -1, p);
+                        }
+                    }
+                }
             }
         }
         return moves;
