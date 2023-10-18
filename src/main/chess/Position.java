@@ -3,6 +3,9 @@ package chess;
 import java.util.Objects;
 
 public class Position implements ChessPosition{
+    /**
+     *
+     */
     private int row;
     private int column;
     public Position(int c, int r){

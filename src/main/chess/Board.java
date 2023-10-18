@@ -1,6 +1,9 @@
 package chess;
 
 public class Board implements ChessBoard{
+    /**
+     *
+     */
     public ChessPiece[][] layout;
     public Board(){
         layout = new ChessPiece[8][8];

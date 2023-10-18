@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+    <option name="CUSTOM_SCOPE_NAME" value="Current File" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9c8bb-5ec1-4739-93c3-f5fad2de4b8d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/Requests/CreateGameRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Requests/JoinGameRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Requests/ListGamesRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Requests/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Requests/LogoutRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Requests/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Requests/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Responses/ClearResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Responses/CreateGameResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Responses/JoinGameResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Responses/ListGamesResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Responses/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Responses/LogoutResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Responses/RegisterResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Responses/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ServerModels/AuthtokenModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ServerModels/GameModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ServerModels/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Services/ClearAppService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Services/CreatGameService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Services/ListGamesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Services/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Services/LogoutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Services/RegisterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/chess/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/chess/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Move.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/chess/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/chess/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +100,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -76,32 +118,47 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ChessGameTests">
-    <configuration name="ChessBoardTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.passoffTests in chess">
+    <configuration name="BishopMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="passoffTests.chessTests.*" />
+          <option name="PATTERN" value="passoffTests.chessTests.chessPieceTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="passoffTests.chessTests" />
-      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.ChessBoardTests" />
+      <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
+      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.BishopMoveTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChessGameTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KingMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="passoffTests.chessTests.*" />
+          <option name="PATTERN" value="passoffTests.chessTests.chessPieceTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="passoffTests.chessTests" />
-      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.ChessGameTests" />
+      <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
+      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.KingMoveTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KnightMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoffTests.chessTests.chessPieceTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
+      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.KnightMoveTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,42 +179,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QueenMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="passoffTests in chess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="passoffTests.chessTests.chessPieceTests.*" />
+          <option name="PATTERN" value="passoffTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
-      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.QueenMoveTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RookMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="passoffTests.chessTests.chessPieceTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
-      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.RookMoveTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="passoffTests" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ChessGameTests" />
-        <item itemvalue="JUnit.ChessBoardTests" />
-        <item itemvalue="JUnit.RookMoveTests" />
-        <item itemvalue="JUnit.QueenMoveTests" />
+        <item itemvalue="JUnit.passoffTests in chess" />
+        <item itemvalue="JUnit.BishopMoveTests" />
+        <item itemvalue="JUnit.KingMoveTests" />
+        <item itemvalue="JUnit.KnightMoveTests" />
         <item itemvalue="JUnit.PawnMoveTests" />
       </list>
     </recent_temporary>
@@ -174,7 +215,12 @@
       <workItem from="1696013383568" duration="89000" />
       <workItem from="1696013484199" duration="2561000" />
       <workItem from="1696106054074" duration="37853000" />
-      <workItem from="1696698542515" duration="26765000" />
+      <workItem from="1696698542515" duration="27058000" />
+      <workItem from="1696950375167" duration="129000" />
+      <workItem from="1697119636915" duration="398000" />
+      <workItem from="1697152317224" duration="4317000" />
+      <workItem from="1697422383594" duration="15849000" />
+      <workItem from="1697553358878" duration="6340000" />
     </task>
     <servers />
   </component>

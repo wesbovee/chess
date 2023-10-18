@@ -4,6 +4,10 @@ import java.util.Collection;
 import java.util.HashSet;
 
 public class Rook extends Piece {
+    /**
+     *
+     * @param color
+     */
     public Rook(ChessGame.TeamColor color){
         this.color = color;
         type = PieceType.ROOK;

@@ -7,6 +7,9 @@ import static chess.ChessGame.TeamColor.BLACK;
 import static chess.ChessGame.TeamColor.WHITE;
 
 public class Game implements ChessGame{
+    /**
+     *
+     */
 
     private TeamColor teamTurn;
     private Board gameBoard;

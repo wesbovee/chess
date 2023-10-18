@@ -3,6 +3,9 @@ package chess;
 import java.util.Collection;
 
 public abstract class Piece implements ChessPiece{
+    /**
+     *
+     */
     protected ChessGame.TeamColor color;
     protected ChessPiece.PieceType type;
     @Override

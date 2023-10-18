@@ -7,6 +7,10 @@ import java.util.HashSet;
 import static chess.ChessGame.TeamColor.WHITE;
 
 public class Pawn extends Piece {
+    /**
+     *
+     * @param color
+     */
     public Pawn(ChessGame.TeamColor color){
         this.color = color;
         type = PieceType.PAWN;

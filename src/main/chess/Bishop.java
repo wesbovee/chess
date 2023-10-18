@@ -4,6 +4,10 @@ import java.util.Collection;
 import java.util.HashSet;
 
 public class Bishop extends Piece {
+    /**
+     *
+     * @param color
+     */
     public Bishop(ChessGame.TeamColor color){
         this.color = color;
         type = PieceType.BISHOP;
