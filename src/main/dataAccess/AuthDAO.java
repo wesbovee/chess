@@ -29,7 +29,7 @@ public class AuthDAO {
      * @param authtoken
      * @throws DataAccessException
      */
-    public boolean exists(String authtoken) throws DataAccessException{
-        return false;
+    public AuthtokenModel exists(String authtoken) throws DataAccessException{
+        return null;
     }
 }

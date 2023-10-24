@@ -47,4 +47,12 @@ public class GameDAO {
     public void update(GameModel g) throws DataAccessException {
     }
 
+    /**
+     * deletes the individual game
+     * @param gID
+     * @throws DataAccessException
+     */
+    public void delete(int gID) throws DataAccessException {
+    }
+
 }
