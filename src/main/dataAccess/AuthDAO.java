@@ -2,26 +2,52 @@ package dataAccess;
 
 import ServerModels.AuthtokenModel;
 
+import java.util.HashMap;
+import java.util.UUID;
+
 public class AuthDAO {
+    public static HashMap<String,String> auths;
     /**
      * the clear method clears all authorization tokens from the DB
      */
-    public void clear() throws DataAccessException { }
+    public void clear() throws DataAccessException{
+        if (true){
+            auths.clear();
+        }
+        else{
+            throw new DataAccessException("Error: description");
+        }
+    }
 
     /**
      * uses the auth token to delete the authtoken from the database to end the session and log out the user
      * @param authtoken
      * @throws DataAccessException
      */
-    public void delete(String authtoken) throws DataAccessException {}
+    public void delete(String authtoken) throws DataAccessException {
+        if (true){
+            auths.remove(authtoken);
+        }
+        else{
+            throw new DataAccessException("Error: description");
+        }
+    }
 
     /**
      * creates an authorization token and stores it in the database
      * @param username
      * @throws DataAccessException
      */
-    public int create(String username) throws DataAccessException {
-        return 0;
+    public String create(String username) throws DataAccessException {
+        UUID uuid = UUID.randomUUID();
+        String uuidAsString = uuid.toString();
+        if(true) {
+            auths.put(uuidAsString, username);
+        }
+        else{
+            throw new DataAccessException("Error: description");
+        }
+        return uuidAsString;
     }
 
     /**
@@ -29,7 +55,20 @@ public class AuthDAO {
      * @param authtoken
      * @throws DataAccessException
      */
-    public AuthtokenModel exists(String authtoken) throws DataAccessException{
-        return null;
+    public boolean exists(String authtoken) throws DataAccessException{
+        if (auths.containsKey(authtoken)){
+            return true;
+        }
+        else{
+            throw new DataAccessException("Error: unauthorized" );
+        }
+    }
+    public String find(String authtoken) throws DataAccessException{
+        if (auths.containsKey(authtoken)){
+            return auths.get(authtoken);
+        }
+        else{
+            throw new DataAccessException("Error: bad request" );
+        }
     }
 }

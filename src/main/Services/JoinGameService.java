@@ -1,7 +1,11 @@
 package Services;
 
 import Requests.JoinGameRequest;
+import Responses.CreateGameResponse;
 import Responses.JoinGameResponse;
+import dataAccess.AuthDAO;
+import dataAccess.DataAccessException;
+import dataAccess.GameDAO;
 
 /**
  * Verifies that the specified game exists, and, if a color is
@@ -16,7 +20,24 @@ public class JoinGameService {
      * GameDAO.find to make sure the game exists. if the user has submitted a color,
      * the result of the find method is then altered to change the color to username of
      * the user making the request then uses the update to store it with the same id
-     * @param r
+     * @param request
      */
-    public JoinGameResponse joinGame (JoinGameRequest r) {return null;}
+    public JoinGameResponse joinGame (JoinGameRequest request) {
+        JoinGameResponse response = new JoinGameResponse();
+        int gameID = request.getGameID();
+        String playerColor = request.getColor();
+        String token = request.getAuthorization();
+        if(playerColor != null) {
+            try {
+                if (new AuthDAO().exists(token) && new GameDAO().exists(gameID)) {
+                    new GameDAO().claimSpot(new AuthDAO().find(token), playerColor, gameID);
+                }
+            } catch (DataAccessException e) {
+                response.setMessage(e.getMessage());
+            }
+        }else {
+            response.setMessage("Error: bad request");
+        }
+        return response;
+    }
 }

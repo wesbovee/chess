@@ -2,18 +2,38 @@ package dataAccess;
 
 import ServerModels.UserModel;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 public class UserDAO {
+    public static HashMap<String, UserModel> users;
+    public static HashSet<String> emails;
     /**
      * the clear method clears all users from the DB
      */
-    public void clear() throws DataAccessException { }
+    public void clear() throws DataAccessException{
+        if (true){
+            users.clear();
+            emails.clear();
+        }
+        else{
+            throw new DataAccessException("Error: description");
+        }
+    }
 
     /**
      * registers the user and adds info into the DB
      * @param user
      * @throws DataAccessException
      */
-    public void create(UserModel user) throws DataAccessException {}
+    public void create(UserModel user) throws DataAccessException {
+        String email = user.getEmail();
+        String username = user.getUsername();
+        if (emails.contains(email)||users.containsKey(username)){
+            throw new DataAccessException("Error: already taken");
+        }
+        users.put(username, user);
+    }
 
     /**
      * this function aids in logging in by
@@ -24,7 +44,7 @@ public class UserDAO {
      * @throws DataAccessException
      */
     public UserModel find(String username) throws DataAccessException{
-        return null;
+        return users.get(username);
     }
 
 

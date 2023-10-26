@@ -9,7 +9,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9c8bb-5ec1-4739-93c3-f5fad2de4b8d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_simple.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sparkjava_spark_core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Server/ChessServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Services/CreateGameService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/handlers/ClearHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/handlers/CreateGameHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/handlers/JoinGameHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/handlers/ListGameHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/handlers/LoginHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/handlers/LogoutHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/handlers/RegisterHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chess.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/JavaDoc/Services/CreatGameService.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/JavaDoc/Services/CreatGameService.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/CreateGameRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/CreateGameRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/JoinGameRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/JoinGameRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/ListGamesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/ListGamesRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/LogoutRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/LogoutRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/ClearResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/ClearResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/CreateGameResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/CreateGameResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/JoinGameResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/JoinGameResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/ListGamesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/ListGamesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/LogoutResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/LogoutResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/ClearAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/ClearAppService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/CreatGameService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/ListGamesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/ListGamesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/LogoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/LogoutService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,42 +78,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/wb/Desktop/CS240/chess/src/test&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-20",
+    "last_opened_file_path": "/Users/wb/Desktop/CS240/chess",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.general",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test/passoffTests" />
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$/src/starter" />
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.passoffTests.chessTests in chess">
+  <component name="RunManager" selected="Application.ChessServer">
+    <configuration name="ChessServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.ChessServer" />
+      <module name="chess" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BishopMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <extension name="coverage">
@@ -99,21 +149,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
       <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.KingMoveTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KnightMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="passoffTests.chessTests.chessPieceTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
-      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.KnightMoveTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ChessServer" />
         <item itemvalue="JUnit.passoffTests.chessTests in chess" />
         <item itemvalue="JUnit.passoffTests in chess" />
         <item itemvalue="JUnit.BishopMoveTests" />
         <item itemvalue="JUnit.KingMoveTests" />
-        <item itemvalue="JUnit.KnightMoveTests" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +211,7 @@
       <workItem from="1697422383594" duration="15849000" />
       <workItem from="1697553358878" duration="6824000" />
       <workItem from="1697667515055" duration="1451000" />
+      <workItem from="1697926849604" duration="40137000" />
     </task>
     <servers />
   </component>

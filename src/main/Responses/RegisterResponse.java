@@ -5,32 +5,12 @@ package Responses;
  */
 public class RegisterResponse {
     /**
-     * status to be returned to front end
-     */
-    private int status;
-    /**
      * info needed in the front end or regaurding error
      */
-     private String message;
+     private String message = null;
+     private String username = null;
+     private String authToken = null;
 
-    /**
-     * if successful returns a 200 with a username and authtoken
-     * otherwise returns an error code being either 400,403,or 500
-     * @param stat status of service
-     * @param mes if success then auth token and username else if an error occurred what happened?
-     */
-    public RegisterResponse(int stat, String mes){
-        status = stat;
-        message = mes;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
 
     public String getMessage() {
         return message;
@@ -38,5 +18,21 @@ public class RegisterResponse {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getAuthToken() {
+        return authToken;
+    }
+
+    public void setAuthToken(String authToken) {
+        this.authToken = authToken;
     }
 }

@@ -10,42 +10,30 @@ public class JoinGameRequest {
     /**
      * token provided by front end
      */
-    String authtoken;
+    String authorization;
     /**
      * color of desired team
      */
-    private ChessGame.TeamColor col;
+    private String color;
     /**
      * game wanting to join
      */
     private int gameID;
 
-    /**
-     * contains info necesary to complete the request
-     * @param token
-     * @param c
-     * @param gid
-     */
-    public JoinGameRequest(String token, ChessGame.TeamColor c, int gid){
-        col = c;
-        gameID = gid;
-        authtoken = token;
+    public String getAuthorization() {
+        return authorization;
     }
 
-    public String getAuthtoken() {
-        return authtoken;
+    public void setAuthorization(String authorization) {
+        this.authorization = authorization;
     }
 
-    public void setAuthtoken(String authtoken) {
-        this.authtoken = authtoken;
+    public String getColor() {
+        return color;
     }
 
-    public ChessGame.TeamColor getCol() {
-        return col;
-    }
-
-    public void setCol(ChessGame.TeamColor col) {
-        this.col = col;
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getGameID() {

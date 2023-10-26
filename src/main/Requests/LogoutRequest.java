@@ -7,13 +7,13 @@ public class LogoutRequest {
     /**
      * token provided by front end
      */
-    private String authtoken;
+    private String authorization = null;
 
-    /**
-     * package of info sent into the Service
-     * @param token
-     */
-    public LogoutRequest(String token){
-        authtoken = token;
+    public String getAuthorization() {
+        return authorization;
+    }
+
+    public void setAuthorization(String authorization) {
+        this.authorization = authorization;
     }
 }

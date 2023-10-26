@@ -17,10 +17,6 @@ public class LoginRequest {
     /**
      * contains all parameters necessary to complete service
      */
-    public LoginRequest(String un, String pw){
-        username = un;
-        password = pw;
-    }
 
     public String getUsername() {
         return username;

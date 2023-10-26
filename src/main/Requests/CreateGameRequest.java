@@ -8,28 +8,18 @@ public class CreateGameRequest {
     /**
      * token provided by front end
      */
-    String authtoken;
+    String authorization;
     /**
      * name to be assigned to game
      */
     String gameName;
 
-    /**
-     * contains information necessary for the service to complete its job
-     * @param token
-     * @param name
-     */
-    public CreateGameRequest(String token, String name){
-        authtoken = token;
-        gameName = name;
+    public String getAuthorization() {
+        return authorization;
     }
 
-    public String getAuthtoken() {
-        return authtoken;
-    }
-
-    public void setAuthtoken(String authtoken) {
-        this.authtoken = authtoken;
+    public void setAuthorization(String authorization) {
+        this.authorization = authorization;
     }
 
     public String getGameName() {

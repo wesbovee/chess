@@ -1,5 +1,6 @@
 package Responses;
 
+import ServerModels.GameModel;
 import chess.ChessGame;
 
 import java.util.Collection;
@@ -9,14 +10,27 @@ import java.util.Collection;
  */
 
 public class ListGamesResponse {
-    /**
-     * status of backend activity
-     */
-    int status;
+
+    public Collection<GameModel> getGames() {
+        return games;
+    }
+
+    public void setGames(Collection<GameModel> games) {
+        this.games = games;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     /**
      * collection of games to be listed
      */
-    Collection<ChessGame> games;
+    Collection<GameModel> games;
     /**
      * messaging in case of error
      */
@@ -29,9 +43,5 @@ public class ListGamesResponse {
      * @param g
      * @param mes
      */
-    public ListGamesResponse(int stat, Collection<ChessGame> g, String mes){
-        status = stat;
-        games = g;
-        message = mes;
-    }
+
 }
