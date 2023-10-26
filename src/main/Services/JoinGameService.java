@@ -3,6 +3,7 @@ package Services;
 import Requests.JoinGameRequest;
 import Responses.CreateGameResponse;
 import Responses.JoinGameResponse;
+import chess.ChessGame;
 import dataAccess.AuthDAO;
 import dataAccess.DataAccessException;
 import dataAccess.GameDAO;
@@ -25,18 +26,15 @@ public class JoinGameService {
     public JoinGameResponse joinGame (JoinGameRequest request) {
         JoinGameResponse response = new JoinGameResponse();
         int gameID = request.getGameID();
-        String playerColor = request.getColor();
+        ChessGame.TeamColor playerColor = request.getPlayerColor();
         String token = request.getAuthorization();
-        if(playerColor != null) {
-            try {
-                if (new AuthDAO().exists(token) && new GameDAO().exists(gameID)) {
-                    new GameDAO().claimSpot(new AuthDAO().find(token), playerColor, gameID);
-                }
-            } catch (DataAccessException e) {
-                response.setMessage(e.getMessage());
+
+        try {
+            if (new AuthDAO().exists(token) && new GameDAO().exists(gameID) && playerColor != null) {
+                new GameDAO().claimSpot(new AuthDAO().find(token), playerColor, gameID);
             }
-        }else {
-            response.setMessage("Error: bad request");
+        } catch (DataAccessException e) {
+            response.setMessage(e.getMessage());
         }
         return response;
     }

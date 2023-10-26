@@ -28,7 +28,6 @@ public class RegisterService {
         if(username == null || password == null || email == null){
             response.setMessage("Error: bad request");
         }else{
-            response.setUsername(username);
             UserModel possibleUser = new UserModel(username,password,email);
             try {
                 new UserDAO().create(possibleUser);

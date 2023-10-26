@@ -7,7 +7,7 @@ public class ClearResponse {
     /**
      * message regarding status of request
      */
-    public String message;
+    public String message = null;
 
     public String getMessage() {
         return message;

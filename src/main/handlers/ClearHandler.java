@@ -5,13 +5,13 @@ import Services.ClearAppService;
 import com.google.gson.Gson;
 import spark.Request;
 import spark.Response;
-import Server.ChessServer;
+import spark.Route;
 
-public class ClearHandler {
-    public String clear(Request req, Response res){
-        ClearResponse response = new ClearAppService().clearApplication();
-        res.body(new Gson().toJson(response));
-        res.status(ChessServer.getStatusCode(response.message));
-        return res.body();
+public class ClearHandler implements Route {
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
+        ClearResponse myRes =  new ClearAppService().clearApplication();
+        response.status(200);
+        return new Gson().toJson(myRes);
     }
 }

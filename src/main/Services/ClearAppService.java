@@ -5,6 +5,10 @@ import dataAccess.AuthDAO;
 import dataAccess.DataAccessException;
 import dataAccess.GameDAO;
 import dataAccess.UserDAO;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * clears the database of all usernames, games and authorization tokens
@@ -20,10 +24,11 @@ public class ClearAppService {
             new AuthDAO().clear();
             new GameDAO().clear();
             new UserDAO().clear();
+            return response;
         }
         catch(DataAccessException e){
             response.setMessage(""+e);
+            return response;
         }
-        return response;
     }
 }

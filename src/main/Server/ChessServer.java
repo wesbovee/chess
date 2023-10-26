@@ -1,5 +1,6 @@
 package Server;
 
+import handlers.*;
 import spark.Spark;
 
 import java.util.Map;
@@ -24,12 +25,12 @@ public class ChessServer {
 
     }
     public void directToHandler() {
-        Spark.delete("/db",(req, res) -> new handlers.ClearHandler().clear(req, res));
-        Spark.post("/user",(req, res) -> new handlers.RegisterHandler().register(req,res));
-        Spark.post ("/session", (req, res) -> new handlers.LoginHandler().login(req, res));
+        Spark.delete("/db", new ClearHandler());
+        Spark.post("/user", new RegisterHandler());
+        Spark.post ("/session",new LoginHandler());
         Spark.delete ("/session",(req, res) -> new handlers.LogoutHandler().logout(req, res));
-        Spark.get("/game", (req, res) -> new handlers.ListGameHandler().list(req, res));
-        Spark.post("/game", (req, res) -> new handlers.CreateGameHandler().create(req, res));
-        Spark.put("/game", (req, res) -> new handlers.JoinGameHandler().join(req,res));
+        Spark.get("/game", new ListGameHandler());
+        Spark.post("/game", new CreateGameHandler());
+        Spark.put("/game", new JoinGameHandler());
     }
 }

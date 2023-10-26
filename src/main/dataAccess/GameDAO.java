@@ -10,18 +10,15 @@ import java.util.Collection;
 import java.util.HashMap;
 
 public class GameDAO {
-    public static HashMap<Integer, GameModel> g_list;
+    public static HashMap<Integer, GameModel> g_list = new HashMap<>();
     public static int count = 0;
     /**
      * the clear method clears all games from the DB
      */
     public void clear() throws DataAccessException{
-        if (true){
+        if(!g_list.isEmpty()){
             count = 0;
             g_list.clear();
-        }
-        else{
-            throw new DataAccessException("Error: description");
         }
     }
 
@@ -31,29 +28,25 @@ public class GameDAO {
      * @throws DataAccessException
      */
     public Collection<GameModel> listOGames() throws DataAccessException{
-        if(true){
-            return g_list.values();
-        }
-        else{
-            throw new DataAccessException("Error: description");
-        }
+        return g_list.values();
     }
 
     /**
      * creates a new object of type GameModel and stores it in the database
-     * @return GameModel
+     * @return int
      * @throws DataAccessException
      */
     public int create(String gameName) throws DataAccessException{
         count++;
-        GameModel game = new GameModel(count, null, null, gameName, new Game());
-        g_list.put(count,game);
+        int gameID = count;
+        GameModel game = new GameModel(gameID, null, null, gameName, new Game());
+        g_list.put(gameID,game);
         return count;
     }
     /**
      * find function aids in the join game function this is step one to ensure that the game exisits
      * @param id
-     * @return GameModel
+     * @return boolean
      * @throws DataAccessException
      */
     public boolean exists(int id) throws DataAccessException {
@@ -70,8 +63,7 @@ public class GameDAO {
      * @throws DataAccessException
      */
     public void update(GameModel g, int gameID) throws DataAccessException {
-        g_list.remove(gameID);
-        g_list.put(gameID,g);
+        g_list.replace(gameID,g);
     }
 
     /**
@@ -80,22 +72,20 @@ public class GameDAO {
      * @param col
      * @throws DataAccessException
      */
-    public void claimSpot(String un, String col, int gameID) throws DataAccessException{
+    public void claimSpot(String un, ChessGame.TeamColor col, int gameID) throws DataAccessException{
         GameModel currentGame = g_list.get(gameID);
-        if (col == "WHITE"){
-            if (currentGame.getWhiteUsername() != null) {
+        if (col.equals(ChessGame.TeamColor.WHITE)){
+            if (currentGame.getWhiteUsername() == null) {
                 currentGame.setWhiteUsername(un);
             }else{
                 throw new DataAccessException("Error: already taken");
             }
-        }else if (col == "BLACK"){
-            if(currentGame.getBlackUsername() != null){
+        }else if (col.equals(ChessGame.TeamColor.BLACK)) {
+            if (currentGame.getBlackUsername() == null) {
                 currentGame.setBlackUsername(un);
-            }else{
+            } else {
                 throw new DataAccessException("Error: already taken");
             }
-        }else {
-            throw new DataAccessException("Error: bad request");
         }
         update(currentGame,gameID);
     }

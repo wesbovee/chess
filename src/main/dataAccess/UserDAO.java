@@ -6,18 +6,17 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class UserDAO {
-    public static HashMap<String, UserModel> users;
-    public static HashSet<String> emails;
+    public static HashMap<String, UserModel> users = new HashMap<>();
+    public static HashSet<String> emails = new HashSet<>();
     /**
      * the clear method clears all users from the DB
      */
     public void clear() throws DataAccessException{
-        if (true){
+        if(!users.isEmpty()){
             users.clear();
-            emails.clear();
         }
-        else{
-            throw new DataAccessException("Error: description");
+        if(!emails.isEmpty()){
+            emails.clear();
         }
     }
 
@@ -44,7 +43,11 @@ public class UserDAO {
      * @throws DataAccessException
      */
     public UserModel find(String username) throws DataAccessException{
-        return users.get(username);
+        if (users.containsKey(username)){
+            return users.get(username);
+        }else {
+            throw new DataAccessException("Error: unauthorized");
+        }
     }
 
 

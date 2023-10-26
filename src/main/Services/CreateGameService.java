@@ -20,16 +20,17 @@ public class CreateGameService {
         CreateGameResponse response = new CreateGameResponse();
         String gameName = request.getGameName();
         String token = request.getAuthorization();
-        if (gameName == null){
-            response.setMessage("Error: bad request");
-        } else{
-            try{
-                if (new AuthDAO().exists(token)){
-                    response.setGameID(new GameDAO().create(gameName));
-                }
-            }catch (DataAccessException e){
-                response.setMessage(e.getMessage());
-            }
+       try{
+           if (new AuthDAO().exists(token)){
+               if (gameName == null){
+                   response.setMessage("Error: bad request");
+               }else {
+                   int id = new GameDAO().create(gameName);
+                   response.setGameID(id);
+               }
+           }
+        }catch (DataAccessException e){
+            response.setMessage(e.getMessage());
         }
         return response;
     }

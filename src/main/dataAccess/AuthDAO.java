@@ -6,16 +6,13 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class AuthDAO {
-    public static HashMap<String,String> auths;
+    public static HashMap<String,String> auths = new HashMap<>();
     /**
      * the clear method clears all authorization tokens from the DB
      */
     public void clear() throws DataAccessException{
-        if (true){
+        if(!auths.isEmpty()){
             auths.clear();
-        }
-        else{
-            throw new DataAccessException("Error: description");
         }
     }
 
@@ -25,12 +22,7 @@ public class AuthDAO {
      * @throws DataAccessException
      */
     public void delete(String authtoken) throws DataAccessException {
-        if (true){
-            auths.remove(authtoken);
-        }
-        else{
-            throw new DataAccessException("Error: description");
-        }
+        auths.remove(authtoken);
     }
 
     /**
@@ -41,12 +33,7 @@ public class AuthDAO {
     public String create(String username) throws DataAccessException {
         UUID uuid = UUID.randomUUID();
         String uuidAsString = uuid.toString();
-        if(true) {
-            auths.put(uuidAsString, username);
-        }
-        else{
-            throw new DataAccessException("Error: description");
-        }
+        auths.put(uuidAsString, username);
         return uuidAsString;
     }
 

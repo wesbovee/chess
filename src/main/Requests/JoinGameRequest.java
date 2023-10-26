@@ -14,7 +14,7 @@ public class JoinGameRequest {
     /**
      * color of desired team
      */
-    private String color;
+    private ChessGame.TeamColor playerColor;
     /**
      * game wanting to join
      */
@@ -28,12 +28,12 @@ public class JoinGameRequest {
         this.authorization = authorization;
     }
 
-    public String getColor() {
-        return color;
+    public ChessGame.TeamColor getPlayerColor() {
+        return playerColor;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setPlayerColor(ChessGame.TeamColor playerColor) {
+        this.playerColor = playerColor;
     }
 
     public int getGameID() {

@@ -21,12 +21,11 @@ public class LogoutService {
      * @param request
      */
     public LogoutResponse logout(LogoutRequest request) {
-        Collection<GameModel> games = new ArrayList<>();
-                LogoutResponse response = new LogoutResponse();
+        LogoutResponse response = new LogoutResponse();
         String token = request.getAuthorization();
         try{
             if (new AuthDAO().exists(token)){
-                games = new GameDAO().listOGames();
+                new AuthDAO().delete(token);
             }
         }catch (DataAccessException e){
             response.setMessage(e.getMessage());

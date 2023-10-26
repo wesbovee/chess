@@ -9,47 +9,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9c8bb-5ec1-4739-93c3-f5fad2de4b8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_simple.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sparkjava_spark_core.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Server/ChessServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Services/CreateGameService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/handlers/ClearHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/handlers/CreateGameHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/handlers/JoinGameHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/handlers/ListGameHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/handlers/LoginHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/handlers/LogoutHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/handlers/RegisterHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/ClearAppTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/CreateGameTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/JoinGameTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/ListGamesTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/LoginTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/LogoutTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/RegisterTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chess.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/JavaDoc/Services/CreatGameService.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/JavaDoc/Services/CreatGameService.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Requests/CreateGameRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/CreateGameRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Requests/JoinGameRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/JoinGameRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Requests/ListGamesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/ListGamesRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Requests/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Requests/LogoutRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Requests/LogoutRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Responses/ClearResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/ClearResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Responses/CreateGameResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/CreateGameResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Responses/JoinGameResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/JoinGameResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Responses/ListGamesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/ListGamesResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Responses/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Responses/LogoutResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/LogoutResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Responses/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Server/ChessServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Server/ChessServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Services/ClearAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/ClearAppService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Services/CreatGameService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/CreateGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/CreateGameService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Services/ListGamesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/ListGamesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/LoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Services/LogoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/LogoutService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Services/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/RegisterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/handlers/ClearHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/handlers/ClearHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/handlers/CreateGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/handlers/CreateGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/handlers/JoinGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/handlers/JoinGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/handlers/ListGameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/handlers/ListGameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/handlers/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/handlers/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/handlers/RegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/handlers/RegisterHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +69,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
+    "Downloaded.Files.Path.Enabled": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -116,7 +105,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChessServer">
+  <component name="RunManager" selected="JUnit.ClearAppTests.testClearApplication">
     <configuration name="ChessServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.ChessServer" />
       <module name="chess" />
@@ -124,46 +113,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BishopMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClearAppTests.testClearApplication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="passoffTests.chessTests.chessPieceTests.*" />
+          <option name="PATTERN" value="MyPhase3Tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
-      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.BishopMoveTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="MyPhase3Tests" />
+      <option name="MAIN_CLASS_NAME" value="MyPhase3Tests.ClearAppTests" />
+      <option name="METHOD_NAME" value="testClearApplication" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KingMoveTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StandardAPITests.successLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="passoffTests.chessTests.chessPieceTests.*" />
+          <option name="PATTERN" value="passoffTests.serverTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="passoffTests.chessTests.chessPieceTests" />
-      <option name="MAIN_CLASS_NAME" value="passoffTests.chessTests.chessPieceTests.KingMoveTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="passoffTests in chess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="passoffTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="passoffTests" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="passoffTests.serverTests" />
+      <option name="MAIN_CLASS_NAME" value="passoffTests.serverTests.StandardAPITests" />
+      <option name="METHOD_NAME" value="successLogin" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,13 +159,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="passoffTests.serverTests in chess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoffTests.serverTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoffTests.serverTests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClearAppTests.testClearApplication" />
         <item itemvalue="Application.ChessServer" />
+        <item itemvalue="JUnit.passoffTests.serverTests in chess" />
         <item itemvalue="JUnit.passoffTests.chessTests in chess" />
-        <item itemvalue="JUnit.passoffTests in chess" />
-        <item itemvalue="JUnit.BishopMoveTests" />
-        <item itemvalue="JUnit.KingMoveTests" />
+        <item itemvalue="JUnit.StandardAPITests.successLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +202,7 @@
       <workItem from="1697422383594" duration="15849000" />
       <workItem from="1697553358878" duration="6824000" />
       <workItem from="1697667515055" duration="1451000" />
-      <workItem from="1697926849604" duration="40137000" />
+      <workItem from="1697926849604" duration="60310000" />
     </task>
     <servers />
   </component>
@@ -225,6 +216,15 @@
           <properties class="java.lang.StackOverflowError" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="11" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Services/JoinGameService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

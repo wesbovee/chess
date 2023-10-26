@@ -12,7 +12,7 @@ public class CreateGameResponse {
     /**
      * message correlated with status
      */
-    String message;
+    String message = null;
 
     public int getGameID() {
         return gameID;
