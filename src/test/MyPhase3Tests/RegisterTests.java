@@ -1,9 +1,7 @@
 package MyPhase3Tests;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import dataAccess.AuthDAO;
+import org.junit.jupiter.api.*;
 import passoffTests.TestFactory;
 import passoffTests.obfuscatedTestClasses.TestServerFacade;
 import passoffTests.testClasses.TestModels;
@@ -62,11 +60,22 @@ public class RegisterTests {
         registerRequest.email = "pineapple@under.sea";
         TestModels.TestLoginRegisterResult registerResult = serverFacade.register(registerRequest);
 
+        Assertions.assertEquals(HTTP_OK, serverFacade.getStatusCode(), "Server response code was not 200 OK");
+
+        Assertions.assertEquals("BrotherSB", registerResult.username, "Username returned does not match");
+        Assertions.assertNotNull(registerResult.authToken, "no authToken was returned");
     }
 
     @Test
     @DisplayName("Negative Registration test")
     void testRegistrationNegative(){
+        TestModels.TestRegisterRequest registerRequest = new TestModels.TestRegisterRequest();
+        registerRequest.username = "Joseph";
+        registerRequest.password = "Smith";
+        registerRequest.email = "urim@thummim.net";
+        TestModels.TestLoginRegisterResult registerResult = serverFacade.register(registerRequest);
 
+        Assertions.assertNotEquals(HTTP_OK, serverFacade.getStatusCode(), "Server response code was 200 ");
+        serverFacade.clear();
     }
 }
