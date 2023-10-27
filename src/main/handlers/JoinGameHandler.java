@@ -10,15 +10,6 @@ import spark.Response;
 import spark.Route;
 
 public class JoinGameHandler implements Route {
-//    public String join(Request req, Response res){
-//        JoinGameRequest myReq = new Gson().fromJson(req.body(), JoinGameRequest.class);
-//        myReq.setAuthorization(req.headers("authorization"));
-//        JoinGameResponse myRes = new JoinGameService().joinGame(myReq);
-//        res.body(new Gson().toJson(myRes));
-//        res.status(ChessServer.getStatusCode(myRes.getMessage()));
-//        return res.body();
-//    }
-
     @Override
     public Object handle(Request request, Response response) throws Exception {
         JoinGameRequest myReq = new Gson().fromJson(request.body(), JoinGameRequest.class);

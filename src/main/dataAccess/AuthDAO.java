@@ -22,7 +22,11 @@ public class AuthDAO {
      * @throws DataAccessException
      */
     public void delete(String authtoken) throws DataAccessException {
-        auths.remove(authtoken);
+        if(auths.containsKey(authtoken)){
+            auths.remove(authtoken);
+        } else {
+            throw new DataAccessException("Error: bad request");
+        }
     }
 
     /**

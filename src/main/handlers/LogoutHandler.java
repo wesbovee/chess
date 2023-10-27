@@ -7,14 +7,15 @@ import Services.LogoutService;
 import com.google.gson.Gson;
 import spark.Request;
 import spark.Response;
+import spark.Route;
 
-public class LogoutHandler {
-    public String logout(Request req, Response res){
+public class LogoutHandler implements Route {
+    @Override
+    public Object handle(Request request, Response response) throws Exception {
         LogoutRequest myReq =new LogoutRequest();
-        myReq.setAuthorization(req.headers("authorization"));
+        myReq.setAuthorization(request.headers("authorization"));
         LogoutResponse myRes = new LogoutService().logout(myReq);
-        res.body(new Gson().toJson(myRes));
-        res.status(ChessServer.getStatusCode(myRes.getMessage()));
-        return res.body();
+        response.status(ChessServer.getStatusCode(myRes.getMessage()));
+        return new Gson().toJson(myRes);
     }
 }

@@ -10,14 +10,6 @@ import spark.Response;
 import spark.Route;
 
 public class LoginHandler implements Route {
-//    public String login(Request req, Response res){
-//        LoginRequest myReq = new Gson().fromJson(req.body(), LoginRequest.class);
-//        LoginResponse myRes = new LoginService().login(myReq);
-//        res.body(new Gson().toJson(myRes));
-//        res.status(ChessServer.getStatusCode(myRes.getMessage()));
-//        return res.body();
-//    }
-
     @Override
     public Object handle(Request request, Response response) throws Exception {
         LoginRequest myReq = new Gson().fromJson(request.body(), LoginRequest.class);

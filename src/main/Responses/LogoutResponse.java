@@ -18,10 +18,6 @@ public class LogoutResponse {
     public void setMessage(String message) {
         this.message = message;
     }
-/**
-     * responds with a 200 if successful
-     *      * otherwise returns 401 or 500 with error messaging
-     * @param mes
-     */
+
 
 }
