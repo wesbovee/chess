@@ -1,7 +1,8 @@
 package dataAccess;
+import Server.ChessServer;
 
-import ServerModels.AuthtokenModel;
-
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -11,9 +12,8 @@ public class AuthDAO {
      * the clear method clears all authorization tokens from the DB
      */
     public void clear() throws DataAccessException{
-        if(!auths.isEmpty()){
-            auths.clear();
-        }
+        String clear_statement = "TRUNCATE TABLE auths;";
+        new Call().accessDB(clear_statement, ChessServer.chessdb);
     }
 
     /**
@@ -22,11 +22,8 @@ public class AuthDAO {
      * @throws DataAccessException
      */
     public void delete(String authtoken) throws DataAccessException {
-        if(auths.containsKey(authtoken)){
-            auths.remove(authtoken);
-        } else {
-            throw new DataAccessException("Error: bad request");
-        }
+        String delete_statement = "DELETE from auths WHERE token = '"+authtoken+"';";
+        new Call().accessDB(delete_statement, ChessServer.chessdb);
     }
 
     /**
@@ -37,8 +34,13 @@ public class AuthDAO {
     public String create(String username) throws DataAccessException {
         UUID uuid = UUID.randomUUID();
         String uuidAsString = uuid.toString();
-        auths.put(uuidAsString, username);
-        return uuidAsString;
+        String create_statement = "INSERT INTO auths (token, username) VALUES ('" + uuidAsString + "', '"+ username+"');";
+        try{
+            new Call().accessDB(create_statement, ChessServer.chessdb);
+            return uuidAsString;
+        } catch(DataAccessException e){
+            throw new DataAccessException(e.getMessage());
+        }
     }
 
     /**
@@ -47,7 +49,8 @@ public class AuthDAO {
      * @throws DataAccessException
      */
     public boolean exists(String authtoken) throws DataAccessException{
-        if (auths.containsKey(authtoken)){
+        String exist_statement = "SELECT token from auths WHERE token = '"+authtoken+"';";
+        if (new Call().accessDB(exist_statement, ChessServer.chessdb)){
             return true;
         }
         else{
@@ -55,11 +58,17 @@ public class AuthDAO {
         }
     }
     public String find(String authtoken) throws DataAccessException{
-        if (auths.containsKey(authtoken)){
-            return auths.get(authtoken);
-        }
-        else{
+        String token = null;
+        String find_statement = "SELECT token from auths WHERE token = '"+authtoken+"';";
+        ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb);
+        try {
+            while(rs.next()) {
+                token = rs.getString("token");
+            }
+            return token;
+        } catch (SQLException e){
             throw new DataAccessException("Error: bad request" );
         }
     }
+
 }

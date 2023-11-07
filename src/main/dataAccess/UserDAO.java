@@ -1,7 +1,10 @@
 package dataAccess;
 
+import Server.ChessServer;
 import ServerModels.UserModel;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -12,12 +15,8 @@ public class UserDAO {
      * the clear method clears all users from the DB
      */
     public void clear() throws DataAccessException{
-        if(!users.isEmpty()){
-            users.clear();
-        }
-        if(!emails.isEmpty()){
-            emails.clear();
-        }
+        String clear_statement = "TRUNCATE TABLE users;";
+        new Call().accessDB(clear_statement, new Database());
     }
 
     /**
@@ -28,10 +27,12 @@ public class UserDAO {
     public void create(UserModel user) throws DataAccessException {
         String email = user.getEmail();
         String username = user.getUsername();
-        if (emails.contains(email)||users.containsKey(username)){
-            throw new DataAccessException("Error: already taken");
+        try {
+            String create_statement = "INSERT INTO users (username, password, email) VALUES ('" + username + "', '" + user.getPassword() + "', '" + email + "');";
+            new Call().accessDB(create_statement, ChessServer.chessdb);
+        }catch (DataAccessException e){
+            throw new DataAccessException(e.getMessage());
         }
-        users.put(username, user);
     }
 
     /**
@@ -43,12 +44,20 @@ public class UserDAO {
      * @throws DataAccessException
      */
     public UserModel find(String username) throws DataAccessException{
-        if (users.containsKey(username)){
-            return users.get(username);
-        }else {
-            throw new DataAccessException("Error: unauthorized");
+        String un = null;
+        String pw = null;
+        String em = null;
+        String find_statement = "SELECT * from users WHERE username = '"+username+"';";
+        ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb);
+        try {
+            while(rs.next()) {
+                un = rs.getString("username");
+                pw = rs.getString("password");
+                em = rs.getString("email");
+            }
+            return new UserModel(un,pw,em);
+        } catch (SQLException e){
+            throw new DataAccessException("Error: bad request" );
         }
     }
-
-
 }

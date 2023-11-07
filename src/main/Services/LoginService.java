@@ -24,6 +24,10 @@ public class LoginService {
         String password = request.getPassword();
         try{
             UserModel user = new UserDAO().find(username);
+            if (user.getUsername() == null || user.getPassword() == null || user.getEmail()== null){
+                response.setMessage("Error: unauthorized");
+                return response;
+            }
             if(user.getPassword().equals(password)){
                 response.setAuthToken(new AuthDAO().create(username));
                 response.setUsername(username);

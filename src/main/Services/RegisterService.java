@@ -27,6 +27,7 @@ public class RegisterService {
         String email = request.getEmail();
         if(username == null || password == null || email == null){
             response.setMessage("Error: bad request");
+            return response;
         }else{
             UserModel possibleUser = new UserModel(username,password,email);
             try {

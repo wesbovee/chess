@@ -1,11 +1,17 @@
 package Server;
 
+import dataAccess.Call;
+import dataAccess.Database;
 import handlers.*;
 import spark.Spark;
 
+import javax.xml.crypto.Data;
+import java.sql.SQLException;
 import java.util.Map;
 
 public class ChessServer {
+
+    public static final Database chessdb = new Database();
     final private static Map<String, Integer> mesCodes = Map.of(
             "Error: bad request", 400,
             "Error: unauthorized", 401,
