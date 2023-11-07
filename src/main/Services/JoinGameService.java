@@ -31,7 +31,7 @@ public class JoinGameService {
 
         try {
             if (new AuthDAO().exists(token) && new GameDAO().exists(gameID) && playerColor != null) {
-                new GameDAO().claimSpot(new AuthDAO().find(token), playerColor, gameID);
+                new GameDAO().claimSpot(new AuthDAO().find(token).getAuthToken(), playerColor, gameID);
             }
         } catch (DataAccessException e) {
             response.setMessage(e.getMessage());

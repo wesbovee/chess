@@ -1,5 +1,6 @@
 package dataAccess;
 import Server.ChessServer;
+import ServerModels.AuthtokenModel;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -34,12 +35,16 @@ public class AuthDAO {
     public String create(String username) throws DataAccessException {
         UUID uuid = UUID.randomUUID();
         String uuidAsString = uuid.toString();
-        String create_statement = "INSERT INTO auths (token, username) VALUES ('" + uuidAsString + "', '"+ username+"');";
-        try{
-            new Call().accessDB(create_statement, ChessServer.chessdb);
-            return uuidAsString;
-        } catch(DataAccessException e){
-            throw new DataAccessException(e.getMessage());
+        if(username != null){
+            String create_statement = "INSERT INTO auths (token, username) VALUES (\"" + uuidAsString + "\", \""+ username+"\");";
+            try{
+                new Call().accessDB(create_statement, ChessServer.chessdb);
+                return uuidAsString;
+            } catch(DataAccessException e){
+                throw new DataAccessException(e.getMessage());
+            }
+        }else{
+            throw new DataAccessException("Error: bad request" );
         }
     }
 
@@ -49,23 +54,32 @@ public class AuthDAO {
      * @throws DataAccessException
      */
     public boolean exists(String authtoken) throws DataAccessException{
-        String exist_statement = "SELECT token from auths WHERE token = '"+authtoken+"';";
-        if (new Call().accessDB(exist_statement, ChessServer.chessdb)){
-            return true;
-        }
-        else{
-            throw new DataAccessException("Error: unauthorized" );
+        String exist_statement = "SELECT * from auths WHERE token = '"+authtoken+"';";
+        try {
+            String auth = null;
+            String username = null;
+            ResultSet rs= new Call().fromDB(exist_statement, ChessServer.chessdb);
+            while(rs.next()){
+                auth = rs.getString("token");
+                username = rs.getString("username");
+            }
+            return auth != null && username != null;
+        } catch (SQLException e) {
+            throw new DataAccessException(e.getMessage());
         }
     }
-    public String find(String authtoken) throws DataAccessException{
-        String token = null;
-        String find_statement = "SELECT token from auths WHERE token = '"+authtoken+"';";
-        ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb);
+    public AuthtokenModel find(String authtoken) throws DataAccessException{
         try {
+            String token = null;
+            String username = null;
+            String find_statement = "SELECT * from auths WHERE token = '"+authtoken+"';";
+            ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb);
+
             while(rs.next()) {
                 token = rs.getString("token");
+                username = rs.getString("username");
             }
-            return token;
+            return new AuthtokenModel(token,username);
         } catch (SQLException e){
             throw new DataAccessException("Error: bad request" );
         }
