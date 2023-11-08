@@ -1,5 +1,9 @@
 package dataAccess;
 
+import chess.ChessGame;
+import com.google.gson.Gson;
+import com.mysql.cj.x.protobuf.MysqlxCrud;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -18,7 +22,7 @@ public class Call {
                 black_username VARCHAR(255),
                 white_username VARCHAR(255),
                 name VARCHAR(255) NOT NULL,
-                game TEXT NOT NULL,
+                game TEXT ,
                 PRIMARY KEY (id)
             )""";
 
@@ -75,5 +79,17 @@ public class Call {
             db.returnConnection(conn);
         }
     }
-
+    public Boolean updateGame (int gID, String game, Database db) throws DataAccessException {
+        var conn = db.getConnection();
+        try {
+            var preparedStatement = conn.prepareStatement("UPDATE games SET game=? where ID=?");
+            preparedStatement.setString(1,game);
+            preparedStatement.setInt(2,gID);
+            return preparedStatement.execute();
+        } catch (SQLException ex) {
+            throw new DataAccessException(ex.toString());
+        }finally {
+            db.returnConnection(conn);
+        }
+    }
 }

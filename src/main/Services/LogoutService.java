@@ -26,6 +26,8 @@ public class LogoutService {
         try{
             if (new AuthDAO().exists(token)){
                 new AuthDAO().delete(token);
+            }else{
+                response.setMessage("Error: unauthorized");
             }
         }catch (DataAccessException e){
             response.setMessage(e.getMessage());

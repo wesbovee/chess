@@ -31,7 +31,11 @@ public class JoinGameService {
 
         try {
             if (new AuthDAO().exists(token) && new GameDAO().exists(gameID) && playerColor != null) {
-                new GameDAO().claimSpot(new AuthDAO().find(token).getAuthToken(), playerColor, gameID);
+                new GameDAO().claimSpot(new AuthDAO().find(token).getUsername(), playerColor, gameID);
+            } else if(!new AuthDAO().exists(token)){
+                response.setMessage("Error: unauthorized");
+            } else if (!new GameDAO().exists(gameID)) {
+                response.setMessage("Error: bad request");
             }
         } catch (DataAccessException e) {
             response.setMessage(e.getMessage());

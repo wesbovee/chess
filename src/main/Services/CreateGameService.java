@@ -28,6 +28,8 @@ public class CreateGameService {
                    int id = new GameDAO().create(gameName);
                    response.setGameID(id);
                }
+           }else {
+               response.setMessage("Error: unauthorized");
            }
         }catch (DataAccessException e){
             response.setMessage(e.getMessage());

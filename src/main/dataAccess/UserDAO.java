@@ -29,7 +29,7 @@ public class UserDAO {
         String email = user.getEmail();
         String username = user.getUsername();
         if (exists(user)){
-            throw new DataAccessException("Error: bad request" );
+            throw new DataAccessException("Error: already taken" );
         }else {
             try {
                 String create_statement = "INSERT INTO users (username, password, email) VALUES (\"" + username + "\", \"" + user.getPassword() + "\", \"" + email + "\");";

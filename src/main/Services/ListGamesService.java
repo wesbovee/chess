@@ -23,6 +23,8 @@ public class ListGamesService {
         try{
             if (new AuthDAO().exists(token)){
                 response.setGames(new GameDAO().listOGames());
+            }else{
+                response.setMessage("Error: unauthorized");
             }
         }catch (DataAccessException e){
             response.setMessage(e.getMessage());

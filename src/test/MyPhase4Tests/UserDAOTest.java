@@ -104,7 +104,7 @@ class UserDAOTest {
         try {
             new UserDAO().create(new UserModel(existingUsername, existingPassword, existingEmail));
         }catch (DataAccessException e){
-            assertEquals("Error: bad request", e.getMessage(),"Does not throw error with duplicate entry.");
+            assertEquals("Error: already taken", e.getMessage(),"Does not throw error with duplicate entry.");
         }
     }
 
