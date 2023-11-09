@@ -58,12 +58,13 @@ public class AuthDAO {
         try {
             String auth = null;
             String username = null;
-            ResultSet rs= new Call().fromDB(exist_statement, ChessServer.chessdb);
-            while(rs.next()){
-                auth = rs.getString("token");
-                username = rs.getString("username");
+            try(ResultSet rs= new Call().fromDB(exist_statement, ChessServer.chessdb)) {
+                while (rs.next()) {
+                    auth = rs.getString("token");
+                    username = rs.getString("username");
+                }
+                return auth != null && username != null;
             }
-            return auth != null && username != null;
         } catch (SQLException e) {
             throw new DataAccessException(e.getMessage());
         }
@@ -73,11 +74,12 @@ public class AuthDAO {
             String token = null;
             String username = null;
             String find_statement = "SELECT * from auths WHERE token = '"+authtoken+"';";
-            ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb);
+            try(ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb)) {
 
-            while(rs.next()) {
-                token = rs.getString("token");
-                username = rs.getString("username");
+                while (rs.next()) {
+                    token = rs.getString("token");
+                    username = rs.getString("username");
+                }
             }
             return new AuthtokenModel(token,username);
         } catch (SQLException e){

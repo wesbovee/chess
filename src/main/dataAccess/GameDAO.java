@@ -36,8 +36,7 @@ public class GameDAO {
         String gname = null;
         ChessGame game = null;
         String find_statement = "SELECT * from games;";
-        ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb);
-        try {
+        try(ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb)) {
             while (rs.next()) {
                 gid = rs.getInt("ID");
                 bun = rs.getString("black_username");
@@ -63,12 +62,13 @@ public class GameDAO {
             String create_statement = "INSERT INTO games (name) VALUES (\""+ gameName + "\");";
             new Call().accessDB(create_statement, ChessServer.chessdb);
             String get_id = "Select ID FROM games WHERE name = \""+gameName+"\";";
-            ResultSet rs = new Call().fromDB(get_id,ChessServer.chessdb);
-            while(rs.next()) {
-                gid = rs.getInt("ID");
+            try(ResultSet rs = new Call().fromDB(get_id,ChessServer.chessdb)) {
+                while (rs.next()) {
+                    gid = rs.getInt("ID");
+                }
+                new Call().updateGame(gid, game, ChessServer.chessdb);
+                return gid;
             }
-            new Call().updateGame(gid, game, ChessServer.chessdb);
-            return gid;
         } catch (SQLException e){
             throw new DataAccessException("Error: bad request" );
         }
@@ -86,12 +86,13 @@ public class GameDAO {
        Boolean ret = false;
         try {
             String exists_statement = "SELECT * from games WHERE ID = " + id + ";";
-            ResultSet rs = new Call().fromDB(exists_statement, ChessServer.chessdb);
-            while(rs.next()){
-                returnedID = rs.getInt("ID");
-            }
-            if(returnedID!= -12){
-                ret = true;
+            try(ResultSet rs = new Call().fromDB(exists_statement, ChessServer.chessdb)) {
+                while (rs.next()) {
+                    returnedID = rs.getInt("ID");
+                }
+                if (returnedID != -12) {
+                    ret = true;
+                }
             }
         } catch (DataAccessException | SQLException e){
             return false;
@@ -117,8 +118,7 @@ public class GameDAO {
             check_statement = "SELECT white_username, black_username from games where ID ="+gameID+";";
             claim_statement = "Update games SET black_username = '" + un + "' WHERE ID = " +gameID+";";
         }
-        try{
-            ResultSet rs = new Call().fromDB(check_statement,ChessServer.chessdb);
+        try(ResultSet rs = new Call().fromDB(check_statement,ChessServer.chessdb)){
             while (rs.next()){
                 wUN = rs.getString("white_username");
                 bUN = rs.getString("black_username");

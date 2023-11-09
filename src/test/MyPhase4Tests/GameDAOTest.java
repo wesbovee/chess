@@ -5,10 +5,7 @@ import ServerModels.GameModel;
 import chess.ChessGame;
 import chess.Game;
 import com.google.gson.Gson;
-import dataAccess.AuthDAO;
-import dataAccess.Call;
-import dataAccess.DataAccessException;
-import dataAccess.GameDAO;
+import dataAccess.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -150,10 +147,12 @@ class GameDAOTest {
     @Test
     void createNegative() {
         try{
-            int nid = new GameDAO().create(newGN);
+            int nid = new GameDAO().create("");
         }catch (DataAccessException e){
             assertEquals("Error: bad request",e.getMessage(), "does not throw error");
+            return;
         }
+        fail();
     }
     @Test
     void existsPositive() {

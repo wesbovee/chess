@@ -54,8 +54,8 @@ public class UserDAO {
         String pw = null;
         String em = null;
         String find_statement = "SELECT * from users WHERE username = '"+username+"';";
-        ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb);
-        try {
+
+        try(ResultSet rs = new Call().fromDB(find_statement, ChessServer.chessdb)) {
             while(rs.next()) {
                 un = rs.getString("username");
                 pw = rs.getString("password");
@@ -75,21 +75,23 @@ public class UserDAO {
         Boolean exist = false;
         try {
             String exist_un_statement = "SELECT username from users WHERE username = '" + un + "';";
-            ResultSet rs = new Call().fromDB(exist_un_statement, ChessServer.chessdb);
-            while (rs.next()) {
-                returnedUN = rs.getString("username");
-                if (Objects.equals(un, returnedUN)) {
-                    exist = true;
+            try(ResultSet rs = new Call().fromDB(exist_un_statement, ChessServer.chessdb)) {
+                while (rs.next()) {
+                    returnedUN = rs.getString("username");
+                    if (Objects.equals(un, returnedUN)) {
+                        exist = true;
+                    }
                 }
             }
         }catch (DataAccessException | SQLException e){
             try{
                 String exist_em_statement = "SELECT email from users WHERE username = '" + em + "';";
-                ResultSet rs = new Call().fromDB(exist_em_statement, ChessServer.chessdb);
-                while (rs.next()) {
-                    returnedEM = rs.getString("email");
-                    if (Objects.equals(em, returnedEM)) {
-                        exist = true;
+                try(ResultSet rs = new Call().fromDB(exist_em_statement, ChessServer.chessdb)) {
+                    while (rs.next()) {
+                        returnedEM = rs.getString("email");
+                        if (Objects.equals(em, returnedEM)) {
+                            exist = true;
+                        }
                     }
                 }
             }catch (DataAccessException | SQLException f ) {

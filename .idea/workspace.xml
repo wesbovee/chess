@@ -9,16 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9c8bb-5ec1-4739-93c3-f5fad2de4b8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/MyPhase4Tests/GameDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Services/CreateGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/CreateGameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Services/ListGamesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/ListGamesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Services/LogoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/LogoutService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/Call.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/Call.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MyPhase4Tests/UserDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyPhase4Tests/UserDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MyPhase4Tests/GameDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyPhase4Tests/GameDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +103,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MyPhase4Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MyPhase4Tests" />
+      <option name="MAIN_CLASS_NAME" value="MyPhase4Tests.GameDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameDAOTest.createNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MyPhase4Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MyPhase4Tests" />
+      <option name="MAIN_CLASS_NAME" value="MyPhase4Tests.GameDAOTest" />
+      <option name="METHOD_NAME" value="createNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyPhase4Tests in chess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <extension name="coverage">
@@ -118,21 +144,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyPhase4Tests" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersistenceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="passoffTests.serverTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="passoffTests.serverTests" />
-      <option name="MAIN_CLASS_NAME" value="passoffTests.serverTests.PersistenceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,29 +163,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDAOTest.clear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MyPhase4Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="MyPhase4Tests" />
-      <option name="MAIN_CLASS_NAME" value="MyPhase4Tests.UserDAOTest" />
-      <option name="METHOD_NAME" value="clear" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StandardAPITests" />
-        <item itemvalue="JUnit.MyPhase4Tests in chess" />
-        <item itemvalue="JUnit.UserDAOTest.clear" />
         <item itemvalue="Application.ChessServer" />
-        <item itemvalue="JUnit.PersistenceTest" />
+        <item itemvalue="JUnit.GameDAOTest.createNegative" />
+        <item itemvalue="JUnit.GameDAOTest" />
+        <item itemvalue="JUnit.MyPhase4Tests in chess" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +197,10 @@
       <workItem from="1698438642917" duration="157000" />
       <workItem from="1698858804302" duration="3377000" />
       <workItem from="1699122151768" duration="31336000" />
-      <workItem from="1699318799992" duration="41158000" />
+      <workItem from="1699318799992" duration="41794000" />
+      <workItem from="1699404251172" duration="1188000" />
+      <workItem from="1699405574072" duration="240000" />
+      <workItem from="1699542197713" duration="2157000" />
     </task>
     <servers />
   </component>
@@ -226,9 +224,9 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="55" />
+          <url>file://$PROJECT_DIR$/src/test/MyPhase4Tests/GameDAOTest.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
