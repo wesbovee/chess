@@ -1,9 +1,5 @@
 package dataAccess;
 
-import chess.ChessGame;
-import com.google.gson.Gson;
-import com.mysql.cj.x.protobuf.MysqlxCrud;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

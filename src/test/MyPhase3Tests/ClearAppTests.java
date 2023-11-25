@@ -1,8 +1,5 @@
 package MyPhase3Tests;
 
-import Requests.CreateGameRequest;
-import Server.ChessServer;
-import ServerModels.UserModel;
 import chess.ChessGame;
 import dataAccess.AuthDAO;
 import dataAccess.GameDAO;

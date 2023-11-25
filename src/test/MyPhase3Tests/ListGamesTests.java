@@ -1,7 +1,5 @@
 package MyPhase3Tests;
 
-import Requests.CreateGameRequest;
-import Responses.CreateGameResponse;
 import org.junit.jupiter.api.*;
 import passoffTests.TestFactory;
 import passoffTests.obfuscatedTestClasses.TestServerFacade;

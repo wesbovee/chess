@@ -5,7 +5,6 @@ import ServerModels.AuthtokenModel;
 import dataAccess.AuthDAO;
 import dataAccess.Call;
 import dataAccess.DataAccessException;
-import dataAccess.Database;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

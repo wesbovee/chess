@@ -9,11 +9,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9c8bb-5ec1-4739-93c3-f5fad2de4b8d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/client_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/ui/EscapeSequences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/ui/ServerFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/main/ui/client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/shared.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/AuthDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chess.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/CreateGameRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Requests/CreateGameRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/JoinGameRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Requests/JoinGameRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/ListGamesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Requests/ListGamesRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Requests/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/LogoutRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Requests/LogoutRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Requests/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/ClearResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Responses/ClearResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/CreateGameResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Responses/CreateGameResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/JoinGameResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Responses/JoinGameResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/ListGamesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Responses/ListGamesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Responses/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/LogoutResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Responses/LogoutResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Responses/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ServerModels/AuthtokenModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/ServerModels/AuthtokenModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ServerModels/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/ServerModels/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ServerModels/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/ServerModels/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/ClearAppService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/ClearAppService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/JoinGameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/LogoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/LogoutService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Services/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Services/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/chess/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/Call.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/Call.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MyPhase4Tests/GameDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyPhase4Tests/GameDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/chess/ChessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/starter/chess/ChessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/chess/ChessGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/starter/chess/ChessGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/chess/ChessMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/starter/chess/ChessMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/chess/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/starter/chess/ChessPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/chess/ChessPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/starter/chess/ChessPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/starter/chess/InvalidMoveException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/starter/chess/InvalidMoveException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MyPhase3Tests/ClearAppTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/ClearAppTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MyPhase3Tests/JoinGameTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/JoinGameTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MyPhase3Tests/ListGamesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/ListGamesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MyPhase3Tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyPhase3Tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MyPhase4Tests/AuthDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyPhase4Tests/AuthDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/passoffTests/TestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/passoffTests/TestFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/passoffTests/chessTests/chessExtraCredit/CastlingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/passoffTests/chessTests/chessExtraCredit/CastlingTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/passoffTests/chessTests/chessExtraCredit/EnPassantTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/passoffTests/chessTests/chessExtraCredit/EnPassantTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +74,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,13 +108,13 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/wb/Desktop/CS240/chess/src/test/passoffTests&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/wb/Desktop/CS240/chess/client/src/main/ui&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
@@ -72,11 +123,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/main/ui" />
       <recent name="$PROJECT_DIR$/src/test/passoffTests" />
       <recent name="$PROJECT_DIR$/src/starter" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test" />
-      <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -89,7 +140,7 @@
       <recent name="MyPhase4Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StandardAPITests">
+  <component name="RunManager" selected="Application.client">
     <configuration name="ChessServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.ChessServer" />
       <module name="chess" />
@@ -103,17 +154,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
+    <configuration name="client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.client" />
+      <module name="client" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MyPhase4Tests.*" />
+          <option name="PATTERN" value="ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="MyPhase4Tests" />
-      <option name="MAIN_CLASS_NAME" value="MyPhase4Tests.GameDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,20 +183,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyPhase4Tests in chess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chess" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MyPhase4Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="MyPhase4Tests" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StandardAPITests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chess" />
       <extension name="coverage">
@@ -163,13 +198,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="passoffTests in chess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoffTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoffTests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StandardAPITests" />
+        <item itemvalue="Application.client" />
         <item itemvalue="Application.ChessServer" />
+        <item itemvalue="JUnit.passoffTests in chess" />
+        <item itemvalue="JUnit.StandardAPITests" />
         <item itemvalue="JUnit.GameDAOTest.createNegative" />
-        <item itemvalue="JUnit.GameDAOTest" />
-        <item itemvalue="JUnit.MyPhase4Tests in chess" />
       </list>
     </recent_temporary>
   </component>
@@ -200,12 +249,26 @@
       <workItem from="1699318799992" duration="41794000" />
       <workItem from="1699404251172" duration="1188000" />
       <workItem from="1699405574072" duration="240000" />
-      <workItem from="1699542197713" duration="2157000" />
+      <workItem from="1699542197713" duration="4192000" />
+      <workItem from="1699725993113" duration="9831000" />
+      <workItem from="1700190418478" duration="142000" />
+      <workItem from="1700430330884" duration="26940000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -222,11 +285,6 @@
           <url>file://$PROJECT_DIR$/src/test/passoffTests/serverTests/StandardAPITests.java</url>
           <line>238</line>
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/MyPhase4Tests/GameDAOTest.java</url>
-          <line>149</line>
-          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

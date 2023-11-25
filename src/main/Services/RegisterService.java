@@ -7,8 +7,6 @@ import dataAccess.AuthDAO;
 import dataAccess.DataAccessException;
 import dataAccess.UserDAO;
 
-import java.sql.SQLException;
-
 /**
  * Service will register a new user and store that information in the Database
  */

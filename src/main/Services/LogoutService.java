@@ -2,13 +2,8 @@ package Services;
 
 import Requests.LogoutRequest;
 import Responses.LogoutResponse;
-import ServerModels.GameModel;
 import dataAccess.AuthDAO;
 import dataAccess.DataAccessException;
-import dataAccess.GameDAO;
-
-import java.util.ArrayList;
-import java.util.Collection;
 
 /**
  * class instantiates a method form the AuthDAO in order to fulfill the request

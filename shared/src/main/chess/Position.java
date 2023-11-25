@@ -1,7 +1,5 @@
 package chess;
 
-import java.util.Objects;
-
 public class Position implements ChessPosition{
     /**
      *

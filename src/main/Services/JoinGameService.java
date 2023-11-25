@@ -1,7 +1,6 @@
 package Services;
 
 import Requests.JoinGameRequest;
-import Responses.CreateGameResponse;
 import Responses.JoinGameResponse;
 import chess.ChessGame;
 import dataAccess.AuthDAO;

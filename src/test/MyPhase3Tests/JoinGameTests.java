@@ -1,6 +1,5 @@
 package MyPhase3Tests;
 
-import Requests.JoinGameRequest;
 import chess.ChessGame;
 import org.junit.jupiter.api.*;
 import passoffTests.TestFactory;
