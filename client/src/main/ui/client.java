@@ -90,32 +90,32 @@ public class client {
                         }
                         break;
                     case "join":
-//                        JoinGameResponse play = myServer.joinGame(inputs[1],inputs[2],authToken);
-//                        if(play.getMessage() == null){
-//                            GameModel game = g_list.get(Integer.parseInt(inputs[1]));
-//                            output += "You are playing in game \u001b[36;49;1m"+inputs[1]+"\u001b[39;49;0m on team \u001b[36;49;1m"+inputs[2];
-//                            output += printGame(game.getGame());
-//                            output += "\u001b[39;49;0m\n\n" + liString;
-//                        }else{
-//                            output += play.getMessage()+"\n\n"+ liString;
-//                        }
-                        output += "You are playing in game \u001b[36;49;1m"+inputs[1]+"\u001b[39;49;0m on team \u001b[36;49;1m"+inputs[2];
-                        output += printGame(testGame);
-                        output += "\u001b[39;49;0m\n\n" + liString;
+                        JoinGameResponse play = myServer.joinGame(inputs[1],inputs[2],authToken);
+                        if(play.getMessage() == null){
+                            GameModel game = g_list.get(Integer.parseInt(inputs[1]));
+                            output += "You are playing in game \u001b[36;49;1m"+inputs[1]+"\u001b[39;49;0m on team \u001b[36;49;1m"+inputs[2];
+                            output += printGame(game.getGame());
+                            output += "\u001b[39;49;0m\n\n" + liString;
+                        }else{
+                            output += play.getMessage()+"\n\n"+ liString;
+                        }
+//                        output += "You are playing in game \u001b[36;49;1m"+inputs[1]+"\u001b[39;49;0m on team \u001b[36;49;1m"+inputs[2];
+//                        output += printGame(testGame);
+//                        output += "\u001b[39;49;0m\n\n" + liString;
                         break;
                     case "observe":
-//                        JoinGameResponse observe = myServer.joinObserver(inputs[1],authToken);
-//                        if(observe.getMessage() == null){
-//                            GameModel game = g_list.get(Integer.parseInt(inputs[1]));
-//                            output += "You are watching game \u001b[36;49;1m"+inputs[1];
-//                            output += printGame(game.getGame());
-//                            output += "\u001b[39;49;0m\n\n" + liString;
-//                        }else{
-//                            output += observe.getMessage()+"\n\n"+ liString;
-//                        }
-                        output += "You are playing in game \u001b[36;49;1m"+inputs[1]+"\u001b[39;49;0m on team \u001b[36;49;1m"+inputs[2];
-                        output += printGame(testGame);
-                        output += "\u001b[39;49;0m\n\n" + liString;
+                        JoinGameResponse observe = myServer.joinObserver(inputs[1],authToken);
+                        if(observe.getMessage() == null){
+                            GameModel game = g_list.get(Integer.parseInt(inputs[1]));
+                            output += "You are watching game \u001b[36;49;1m"+inputs[1];
+                            output += printGame(game.getGame());
+                            output += "\u001b[39;49;0m\n\n" + liString;
+                        }else{
+                            output += observe.getMessage()+"\n\n"+ liString;
+                        }
+//                        output += "You are playing in game \u001b[36;49;1m"+inputs[1]+"\u001b[39;49;0m on team \u001b[36;49;1m"+inputs[2];
+//                        output += printGame(testGame);
+//                        output += "\u001b[39;49;0m\n\n" + liString;
                         break;
                     case "logout":
                         LogoutResponse logout = myServer.logout(authToken);
@@ -171,7 +171,7 @@ public class client {
             }
             out += "\u001b[30;47;1m "+ i +" \u001b[39;47;0m\n";
         }
-        out +="\u001b[30;47;1m    h  g  f  e  d  c  b  a    \u001b[39;47;0m\n\n";
+        out +="\u001b[30;47;1m    h  g  f  e  d  c  b  a    \u001b[39;47;0m\n";
         return out;
     }
     public static String printGameBlackTop(ChessGame game){
@@ -201,7 +201,7 @@ public class client {
             }
             out += "\u001b[30;47;1m "+ i +" \u001b[39;47;0m\n";
         }
-        out +="\u001b[30;47;1m    a  b  c  d  e  f  g  h    \u001b[39;47;0m\n\n";
+        out +="\u001b[30;47;1m    a  b  c  d  e  f  g  h    \u001b[39;47;0m\n";
         return out;
     }
     public static String printGame(ChessGame game){

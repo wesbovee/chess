@@ -9,12 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2d9c8bb-5ec1-4739-93c3-f5fad2de4b8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/test/ui/CP5Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/ui/ServerFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/ui/ServerFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/ui/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/ui/client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/chess/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/chess/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/chess/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/test/ui/CP5Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/test/ui/CP5Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dataAccess/GameDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
       <recent name="MyPhase4Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.client">
+  <component name="RunManager" selected="JUnit.CP5Test.listGames_positive">
     <configuration name="ChessServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.ChessServer" />
       <module name="chess" />
@@ -114,22 +113,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CP5Test.joinGame_negative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui" />
-      <option name="MAIN_CLASS_NAME" value="ui.CP5Test" />
-      <option name="METHOD_NAME" value="joinGame_negative" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,13 +149,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CP5Test.listGames_positive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui" />
+      <option name="MAIN_CLASS_NAME" value="ui.CP5Test" />
+      <option name="METHOD_NAME" value="listGames_positive" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CP5Test.listGames_positive" />
         <item itemvalue="Application.client" />
         <item itemvalue="Application.ChessServer" />
         <item itemvalue="JUnit.CP5Test.joinObserver_negative" />
         <item itemvalue="JUnit.CP5Test.joinObserver_positive" />
-        <item itemvalue="JUnit.CP5Test.joinGame_negative" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +205,7 @@
       <workItem from="1699542197713" duration="4192000" />
       <workItem from="1699725993113" duration="9831000" />
       <workItem from="1700190418478" duration="142000" />
-      <workItem from="1700430330884" duration="53607000" />
+      <workItem from="1700430330884" duration="55534000" />
     </task>
     <servers />
   </component>

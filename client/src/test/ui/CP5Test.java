@@ -149,7 +149,11 @@ class CP5Test {
     }
     @Test
     @Order(14)
-    void listGames_positive() {
+    void listGames_positive() throws Exception {
+        String token = testServer.pli_login(existingUN,existingPW).getAuthToken();
+        ListGamesResponse listgames = testServer.listGames(token);
+        assertNull(listgames.getMessage(),"Valid list request returning errors");
+        assertNotNull(listgames.getGames(), "Valid list request returned null instead of games");
     }
 
     @Test

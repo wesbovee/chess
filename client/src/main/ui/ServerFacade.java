@@ -290,12 +290,12 @@ public class ServerFacade {
 
     class GameAdapter implements JsonDeserializer<ChessGame> {
         public ChessGame deserialize(JsonElement el, Type type, JsonDeserializationContext ctx) throws JsonParseException {
-            return new Gson().fromJson(el, Game.class);
+            return ctx.deserialize(el, Game.class);
         }
     }
     class BoardAdapter implements JsonDeserializer<ChessBoard> {
         public ChessBoard deserialize(JsonElement el, Type type, JsonDeserializationContext ctx) throws JsonParseException {
-            return new Gson().fromJson(el, Board.class);
+            return ctx.deserialize(el, Board.class);
         }
     }
     class PieceAdapter implements JsonDeserializer<ChessPiece> {
