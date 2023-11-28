@@ -2,16 +2,15 @@ package ui;
 
 import Requests.*;
 import Responses.*;
-import chess.ChessGame;
-import com.google.gson.Gson;
+import chess.*;
+import com.google.gson.*;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URI;
-import java.net.URL;
-import java.util.Map;
 
 public class ServerFacade {
 
@@ -147,7 +146,7 @@ public class ServerFacade {
 
         connection.connect();
 
-        try(OutputStream requestBody = connection.getOutputStream();) {
+        try(OutputStream requestBody = connection.getOutputStream()) {
             CreateGameRequest client_request = new CreateGameRequest();
             client_request.setGameName(gameName);
             requestBody.write(new Gson().toJson(client_request).getBytes());
@@ -177,23 +176,18 @@ public class ServerFacade {
         HttpURLConnection connection = (HttpURLConnection) uri.toURL().openConnection();
         connection.setReadTimeout(5000);
         connection.setRequestMethod("GET");
-        connection.setDoOutput(true);
 
         connection.addRequestProperty("Authorization", token);
 
         connection.connect();
 
-        try(OutputStream requestBody = connection.getOutputStream();) {
-            ListGamesRequest client_request = new ListGamesRequest();
-            requestBody.write(new Gson().toJson(client_request).getBytes());
-        }
 
         if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
             ListGamesResponse responseBody;
 
             try(InputStream resBody = connection.getInputStream()){
                 InputStreamReader inputStreamReader = new InputStreamReader(resBody);
-                responseBody = new Gson().fromJson(inputStreamReader, ListGamesResponse.class);
+                responseBody = deserialize().fromJson(inputStreamReader, ListGamesResponse.class);
             }
             return responseBody;
         }
@@ -207,13 +201,15 @@ public class ServerFacade {
             return errorMessage;
         }
     }
-    public String joinGame(String ID,String teamColor, String token) throws Exception{
+    public JoinGameResponse joinGame(String ID,String teamColor, String token) throws Exception{
         URI uri = new URI("http://localhost:8080/game");
         HttpURLConnection connection = (HttpURLConnection) uri.toURL().openConnection();
         connection.setReadTimeout(5000);
         connection.setRequestMethod("PUT");
         connection.setDoOutput(true);
         ChessGame.TeamColor tc = null;
+
+        connection.addRequestProperty("Authorization", token);
 
         connection.connect();
 
@@ -230,59 +226,91 @@ public class ServerFacade {
         }
 
         if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-            // Get HTTP response headers, if necessary
-            // Map<String, List<String>> headers = connection.getHeaderFields();
+            JoinGameResponse responseBody;
 
-            // OR
-
-            //connection.getHeaderField("Content-Length");
-            //InputStream responseBody = connection.getInputStream();
-            return "success";
-
-            // Read response body from InputStream ...
+            try(InputStream resBody = connection.getInputStream()){
+                InputStreamReader inputStreamReader = new InputStreamReader(resBody);
+                responseBody = new Gson().fromJson(inputStreamReader, JoinGameResponse.class);
+            }
+            return responseBody;
         }
         else {
-            // SERVER RETURNED AN HTTP ERROR
+            JoinGameResponse errorMessage;
 
-            //InputStream responseBody = connection.getErrorStream();
-            //String error_message = responseBody.
-            // Read and process error response body from InputStream ...
-            return "error";
+            try(InputStream resBody = connection.getErrorStream()){
+                InputStreamReader inputStreamReader = new InputStreamReader(resBody);
+                errorMessage = new Gson().fromJson(inputStreamReader, JoinGameResponse.class);
+            }
+            return errorMessage;
         }
     }
-    public String joinObserver(String ID, String token) throws Exception{
+    public JoinGameResponse joinObserver(String ID, String token) throws Exception{
         URI uri = new URI("http://localhost:8080/game");
         HttpURLConnection connection = (HttpURLConnection) uri.toURL().openConnection();
         connection.setReadTimeout(5000);
         connection.setRequestMethod("PUT");
         connection.setDoOutput(true);
 
+        connection.addRequestProperty("Authorization", token);
+
         connection.connect();
 
         try(OutputStream requestBody = connection.getOutputStream();) {
-            ListGamesRequest client_request = new ListGamesRequest();
+            JoinGameRequest client_request = new JoinGameRequest();
+            client_request.setGameID(Integer.parseInt(ID));
             requestBody.write(new Gson().toJson(client_request).getBytes());
         }
 
         if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-            // Get HTTP response headers, if necessary
-            // Map<String, List<String>> headers = connection.getHeaderFields();
+            JoinGameResponse responseBody;
 
-            // OR
-
-            //connection.getHeaderField("Content-Length");
-            //InputStream responseBody = connection.getInputStream();
-            return "success";
-
-            // Read response body from InputStream ...
+            try(InputStream resBody = connection.getInputStream()){
+                InputStreamReader inputStreamReader = new InputStreamReader(resBody);
+                responseBody = new Gson().fromJson(inputStreamReader, JoinGameResponse.class);
+            }
+            return responseBody;
         }
         else {
-            // SERVER RETURNED AN HTTP ERROR
+            JoinGameResponse errorMessage;
 
-            //InputStream responseBody = connection.getErrorStream();
-            //String error_message = responseBody.
-            // Read and process error response body from InputStream ...
-            return "error";
+            try(InputStream resBody = connection.getErrorStream()){
+                InputStreamReader inputStreamReader = new InputStreamReader(resBody);
+                errorMessage = new Gson().fromJson(inputStreamReader, JoinGameResponse.class);
+            }
+            return errorMessage;
+        }
+    }
+    public Gson deserialize (){
+        var builder = new GsonBuilder();
+        builder.registerTypeAdapter(ChessGame.class, new GameAdapter())
+                .registerTypeAdapter(ChessBoard.class,new BoardAdapter())
+                .registerTypeAdapter(ChessPiece.class,new PieceAdapter());
+        return builder.create();
+    }
+
+    class GameAdapter implements JsonDeserializer<ChessGame> {
+        public ChessGame deserialize(JsonElement el, Type type, JsonDeserializationContext ctx) throws JsonParseException {
+            return new Gson().fromJson(el, Game.class);
+        }
+    }
+    class BoardAdapter implements JsonDeserializer<ChessBoard> {
+        public ChessBoard deserialize(JsonElement el, Type type, JsonDeserializationContext ctx) throws JsonParseException {
+            return new Gson().fromJson(el, Board.class);
+        }
+    }
+    class PieceAdapter implements JsonDeserializer<ChessPiece> {
+        public ChessPiece deserialize(JsonElement el, Type type, JsonDeserializationContext ctx) throws JsonParseException {
+            ChessPiece piece = null;
+            String pieceType = el.getAsJsonObject().get("type").getAsString();
+            switch (pieceType) {
+                case "KING" -> piece = new Gson().fromJson(el, King.class);
+                case "QUEEN" -> piece = new Gson().fromJson(el, Queen.class);
+                case "BISHOP" -> piece = new Gson().fromJson(el, Bishop.class);
+                case "KNIGHT" -> piece = new Gson().fromJson(el, Knight.class);
+                case "ROOK" -> piece = new Gson().fromJson(el, Rook.class);
+                case "PAWN" -> piece = new Gson().fromJson(el, Pawn.class);
+            }
+            return piece;
         }
     }
 }

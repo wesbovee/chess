@@ -5,9 +5,7 @@ public class Board implements ChessBoard{
      *
      */
     public ChessPiece[][] layout;
-    public Board(){
-        layout = new ChessPiece[8][8];
-    }
+    public Board(){layout = new ChessPiece[8][8];}
     @Override
     public void addPiece(ChessPosition position, ChessPiece piece) {
         layout[position.getColumn() - 1][position.getRow() - 1] = piece;

@@ -17,7 +17,7 @@ public class Game implements ChessGame{
     public Game(){
         teamTurn = WHITE;
         gameBoard = new Board();
-
+        gameBoard.stageBoard();
     }
     @Override
     public TeamColor getTeamTurn() {
